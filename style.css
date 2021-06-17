@@ -31,7 +31,64 @@ button {
   margin: 10px;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
+  padding: 15px 20px 15px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+  display: felx;
+  min-width: 30%; 
+}
+
+.todo-item{
+  font-size: 1.5 rem;
+  justify-content: space-between;
+  margin: 0.5 rem;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+#submitForm{
+  background-color: #ffe4e1;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#submitForm:hover {
+  background-color: #efbbcc;
+}
+
+.icon{
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0.5rem;
+}
+
+.todo{
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#check-button{
+  background: #ace1af;
+}
+
+#delete-button{
+  background: #b0e0e6;
+}
+
+#edit-button{
+  background: #fcffa4;
+}
+
+.fa-trash,
+.fa-check,
+.fa-edit {
+  pointer-events: none;
+}
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
 }

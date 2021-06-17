@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Flatiron Task Lister</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div id="main-content">
@@ -12,13 +13,34 @@
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
-      <input type="submit" value="Create New Task">
+
+     
+      <br>
+      <br>
+      <label for="due-date">Due:</label>
+      <input type="text" id="due-date" name="due-date" placeholder="today">
+      
+      <br>
+      <br>
+      <label> Select Priority Level:</label>
+      <select id="dropdown">
+        <option disabled hidden selcted>Select</option>
+        <option value="high">High Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="low">Low Priority</option>
+      </select>
+
+      <br>
+      <br>
+    
+      <input type="submit" id = "submitForm" value="Create New Task">
     </form>
 
     <div id="list">
       <h2>My Todos</h2>
-      <ul id="tasks">
-      </ul>
+      <ul id="listH" class="unordered-list"></ul>
+      <ul id="listM" class="unordered-list"></ul>
+      <ul id="listL" class="unordered-list"></ul>
     </div>
 
     <script src="./src/index.js"></script>
